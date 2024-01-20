@@ -60,6 +60,35 @@ function parallel_trapezium_integral(a, b, n, f):
 ```
 The parallel_sum function represents a parallelized sum operation over a range of values, which can be implemented using parallel processing constructs such as Java streams.
 
-## Testing with GPUs
+## Code
 
-We wrote python code to analyze both 
+ 1. Java Code for the Sequential and Parallel Implementation of the algorithm
+
+ ``` src/ ``` Contains the Java code
+
+ ``` NumericalIntegration.java ``` java code for the algorithm
+ ```FPFunction.java``` java interface for the algorithm
+ ```Main.java``` for testing purposes
+ ```logs.txt``` testing dataset
+
+ 2. Python code for the plot
+
+ ```Plot/``` Contains the Python code for the plot
+
+ ```main.py``` main python file that uses different packages like csv, matlib, pyproject.toml and poetry.lock to create the plot of the computed dateset
+
+ ```logs.txt``` testing dataset
+
+## Testing on GPUs
+
+-->We used NVIDIA's 2070 GPU to test 100,000,000 partitions on both the implementations. 
+-->We tested upto 100,000,000 of input size on our GPU.
+
+## Contributions
+
+Advisor: Prof. Mohammed Abdelrahim of the California State University, Northridge
+Contributors: Roy Ananth, Sambahangphe Mishek, Shea Jackson, Ng Sunnathan and Desai Param. 
+
+
+
+
