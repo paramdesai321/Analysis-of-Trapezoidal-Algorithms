@@ -4,9 +4,7 @@
 Analyizing the complexity of Trapezium algorithm by Sequential and Parallel Computing. 
 
 ## Trapezoidal Rule 
-
-Trapezoidal method is based on the principle that the area under the curve which is to be calculated is divided into number of small segments. The bounding curve in the segment is considered to be a straight line as a result the small enclosed area becomes a trapezium.
-
+The trapezoidal rule is a technique for numerical integration, i.e., approximating the definite integral: The trapezoidal rule works by approximating the region under the graph of the function as a trapezoid and calculating its area.
 ## Sequential Computing
 
 Pseudo Code
@@ -86,7 +84,7 @@ The parallel_sum function represents a parallelized sum operation over a range o
 
 ## Contributions
 
-Advisor: Prof. Mohammed Abdelrahim of the California State University, Northridge
+Advisor: Prof. Mohammed Abdelrahim of the California State University, Northridge;
 Contributors: Roy Ananth, Sambahangphe Mishek, Shea Jackson, Ng Sunnathan and Desai Param. 
 
 
