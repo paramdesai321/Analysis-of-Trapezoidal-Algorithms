@@ -2,7 +2,7 @@
 
 ## Research Objective
 
-Analyzing the complexity of Trapezium algorithm by Sequential and Parallel Computing.
+Analyzing the time complexity of Trapezium algorithm by Sequential and Parallel Computing.
 
 ### Trapezoidal Rule
 
