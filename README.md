@@ -1,14 +1,16 @@
-# Analysis-of-Trapezoidal-Algorithms
+# Analysis of Trapezoidal Algorithms
 
-## Research Objective: 
-Analyizing the complexity of Trapezium algorithm by Sequential and Parallel Computing. 
+## Research Objective
 
-## Trapezoidal Rule 
-The trapezoidal rule is a technique for numerical integration, i.e., approximating the definite integral: The trapezoidal rule works by approximating the region under the graph of the function as a trapezoid and calculating its area.
-## Sequential Computing
+Analyzing the complexity of Trapezium algorithm by Sequential and Parallel Computing.
 
-Pseudo Code
-```
+### Trapezoidal Rule
+
+The trapezoidal rule is a technique for numerical integration, approximating the definite integral by representing the region under the function graph as trapezoids and calculating their areas.
+
+#### Sequential Computing - Pseudo Code
+
+```python
 function trapezium_integral(a, b, n, function_evaluator):
     # Calculate the width of each trapezoid
     range_width = (b - a) / n
@@ -32,14 +34,11 @@ function trapezium_integral(a, b, n, function_evaluator):
     
     # Return the calculated result
     return result
-
 ```
-This simplified pseudo code illustrates the trapezoidal rule for approximating integrals. It uses basic loops and arithmetic operations to calculate the area under the curve represented by the function function_evaluator. The result is an estimation of the definite integral within the specified range [a, b] using n partitions.
 
-## Parallel Computing 
+#### Parallel Computing - Pseudo Code
 
-Pseudo Code:
-```
+```python
 function parallel_trapezium_integral(a, b, n, f):
     # Calculate the width of each trapezoid
     range_width = checkParamsGetRange(a, b, n)
@@ -56,37 +55,33 @@ function parallel_trapezium_integral(a, b, n, f):
     # Return the calculated result
     return result
 ```
-The parallel_sum function represents a parallelized sum operation over a range of values, which can be implemented using parallel processing constructs such as Java streams.
 
-## Code
+### Code
 
- 1. Java Code for the Sequential and Parallel Implementation of the algorithm
+#### Java Implementation
 
- ``` src/ ``` Contains the Java code
+- `src/` contains the Java code
+  - `NumericalIntegration.java`: Java code for the algorithm
+  - `FPFunction.java`: Java interface for the algorithm
+  - `Main.java`: Testing purposes
+  - `logs.txt`: Testing dataset
 
- ``` NumericalIntegration.java ``` java code for the algorithm
- ```FPFunction.java``` java interface for the algorithm
- ```Main.java``` for testing purposes
- ```logs.txt``` testing dataset
+#### Python Plotting Code
 
- 2. Python code for the plot
+- `Plot/` contains the Python code for the plot
+  - `main.py`: Main Python file using packages like `csv`, `matlib`, `pyproject.toml`, and `poetry.lock` to create the plot of the computed dataset
+  - `logs.txt`: Testing dataset
 
- ```Plot/``` Contains the Python code for the plot
+### Testing on GPUs
 
- ```main.py``` main python file that uses different packages like csv, matlib, pyproject.toml and poetry.lock to create the plot of the computed dateset
+- We used NVIDIA's 2070 GPU to test 100,000,000 partitions on both implementations.
+- Tested up to 100,000,000 of input size on our GPU.
 
- ```logs.txt``` testing dataset
+## Time Complexity Analysis
 
-## Testing on GPUs
-
--->We used NVIDIA's 2070 GPU to test 100,000,000 partitions on both the implementations. 
--->We tested upto 100,000,000 of input size on our GPU.
+The trapezium algorithm, tested with 100,000,000 partitions, exhibits **O(n)** time complexity in both sequential and parallel forms. The parallel version, leveraging sub-threads, demonstrates faster execution while maintaining the same **O(n)** time complexity.
 
 ## Contributions
 
-Advisor: Prof. Mohammed Abdelrahim of the California State University, Northridge;
-Contributors: Roy Ananth, Sambahangphe Mishek, Shea Jackson, Ng Sunnathan and Desai Param. 
-
-
-
-
+- Advisor: Prof. Mohammed Abdelrahim of the California State University, Northridge
+- Contributors: Roy Ananth, Sambahangphe Mishek, Shea Jackson, Ng Sunnathan, and Desai Param.
